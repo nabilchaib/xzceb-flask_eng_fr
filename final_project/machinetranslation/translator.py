@@ -26,6 +26,8 @@ def english_to_french(englishText):
     :return: The translated French text.
     :rtype: str
     """
+    if englishText is None:
+      return None
     translation = language_translator.translate(
         text=englishText,
         model_id="en-fr"
@@ -41,7 +43,9 @@ def french_to_english(frenchText):
     :type frenchText: str
     :return: The translated English text.
     :rtype: str
-    """    
+    """ 
+    if frenchText is None:
+      return None   
     translation = language_translator.translate(
         text=frenchText,
         model_id="fr-en"
